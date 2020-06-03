@@ -5,7 +5,7 @@ class CarpetFloor extends Floor
 {
     private $timeRequiredToCleanUnitArea;
 
-    public function __construct($totalArea)
+    public function __construct(int $totalArea)
     {
         parent::__construct($totalArea);
         $this->timeRequiredToCleanUnitArea = 2;

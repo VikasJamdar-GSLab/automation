@@ -35,7 +35,7 @@ class Robot
     }
 
 
-    public static function startRobot($options)
+    public static function startRobot(array $options)
     {
         try {
             validate_options($options);

@@ -1,6 +1,6 @@
 <?php
 
-function validate_options($commandLineOptions)
+function validate_options(array $commandLineOptions)
 {
     if (!array_key_exists('action', $commandLineOptions)) {
         throw new Exception("Please provide action for Robot.");

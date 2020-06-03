@@ -4,7 +4,7 @@ abstract class Floor
 {
     private $totalArea;
     private $cleanedArea;
-    public function __construct($totalArea)
+    public function __construct(int $totalArea)
     {
         $this->totalArea = $totalArea;
         $this->cleanedArea = 0;

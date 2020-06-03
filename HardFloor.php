@@ -4,7 +4,7 @@ require_once('AbstractFloor.php');
 class HardFloor extends Floor
 {
     private $timeRequiredToCleanUnitArea;
-    public function __construct($totalArea)
+    public function __construct(int $totalArea)
     {
         $this->timeRequiredToCleanUnitArea = 1;
         parent::__construct($totalArea);
