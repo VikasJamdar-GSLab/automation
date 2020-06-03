@@ -37,6 +37,7 @@ class Battery
             $timer = $timer + 1;
             echo "Charging robot : ".round($this->chargeLevel, 2)."\n";
         }
+        echo "Resuming to cleaning...\n";
         return $this->chargeLevel;
     }
 

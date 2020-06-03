@@ -19,8 +19,7 @@ class Robot
         $timeRequiredToCleanUnitArea = $floor->getTimeRequiredToCleanUnitArea();
         // Formula to find charge consumed to clean 1 m**2 area
         $chargeConsumptionForOneUnit = (100*$timeRequiredToCleanUnitArea/Battery::TIME_TO_FULLCHARGE);
-        echo "Initial State : \n";
-        echo "chargingLevel : {$this->battery->chargeLevel}   Total Area:{$floor->totalArea} Area cleaned : {$floor->cleanedArea} m sq\n";
+        echo "Initial State : chargingLevel : {$this->battery->chargeLevel}   Total Area:{$floor->totalArea} Area cleaned : {$floor->cleanedArea} m sq\n";
         while ($floor->cleanedArea<$floor->totalArea) {
             if ($this->battery->chargeLevel > 0 && ($this->battery->chargeLevel - $chargeConsumptionForOneUnit)>0) {
                 $this->battery->chargeLevel = $this->battery->chargeLevel - $chargeConsumptionForOneUnit;
@@ -28,6 +27,7 @@ class Robot
                 $rounded_charge = round($this->battery->chargeLevel, 2);
                 echo "chargingLevel : {$rounded_charge}   Area cleaned : {$floor->cleanedArea} m sq\n";
             } else {
+                echo "Robot need power. Switching to charging mode...\n";
                 $this->battery->chargeBattery();
             }
         }

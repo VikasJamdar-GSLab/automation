@@ -23,8 +23,7 @@ Where Robot.php is the main module to be executed with following command line ar
 Sample Result:<br/>
 
 C:\xampp\htdocs\php_training\automation>php Main.php --action=clean --floor=carpet --area=40<br/>
-Initial State :<br/>
-chargingLevel : 100   Total Area:40 Area cleaned : 0 m sq<br/>
+Initial State : chargingLevel : 100   Total Area:40 Area cleaned : 0 m sq<br/>
 chargingLevel : 96.67   Area cleaned : 1 m sq<br/>
 chargingLevel : 93.33   Area cleaned : 2 m sq<br/>
 chargingLevel : 90   Area cleaned : 3 m sq<br/>
@@ -55,6 +54,7 @@ chargingLevel : 10   Area cleaned : 27 m sq<br/>
 chargingLevel : 6.67   Area cleaned : 28 m sq<br/>
 chargingLevel : 3.33   Area cleaned : 29 m sq<br/>
 chargingLevel : 0   Area cleaned : 30 m sq<br/>
+Robot need power. Switching to charging mode...<br/>
 Charging robot : 1.67<br/>
 Charging robot : 3.33<br/>
 Charging robot : 5<br/>
@@ -115,6 +115,7 @@ Charging robot : 95<br/>
 Charging robot : 96.67<br/>
 Charging robot : 98.33<br/>
 Charging robot : 100<br/>
+Resuming to cleaning...<br/>
 chargingLevel : 96.67   Area cleaned : 31 m sq<br/>
 chargingLevel : 93.33   Area cleaned : 32 m sq<br/>
 chargingLevel : 90   Area cleaned : 33 m sq<br/>
