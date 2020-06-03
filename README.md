@@ -8,13 +8,13 @@ These are following assuptions:<br/>
 ● Assuming Robot is initially fully charged.<br/>
 
 How to run the robot task:<br/>
-clone automation git repositor.<br/>
-change directory to automation<br/>
-run robot cleaning task for hard floor use following command:<br/>
+Clone this automation git repository.<br/>
+Change directory to automation<br/>
+Run robot cleaning task for hard floor use following command:<br/>
 
 php Main.php --action=clean --floor=carpet --area=100<br/>
 
-where Robot.php is the main module to be executed with following command line arguments:<br/>
+Where Robot.php is the main module to be executed with following command line arguments:<br/>
 1)action : This argument define what task robot has to do. Right now robot only can do cleaning job<br/>
 2)floor : This argument instruct what type of surface to be cleaned. The supported values are<br/>
           hard or carpet.<br/>
@@ -38,7 +38,7 @@ chargingLevel : 66.67   Area cleaned : 10 m sq<br/>
 
 
 How to run unit tests:<br/>
-install php unit with composer by command:<br/>
+Install php unit with composer by command:<br/>
 composer require --dev phpunit/phpunit ^7<br/>
 
 Run unit tests with :<br/>
