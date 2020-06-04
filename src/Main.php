@@ -4,6 +4,9 @@ use src\Robot\Robot as Robot;
 
 require('Robot.php');
 
+/* 
+Main module will used to kick start cleaning operation.
+*/
 $longopts  = array(
     "action:",     // Required value
     "floor:",      // Required value

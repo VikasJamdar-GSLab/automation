@@ -1,6 +1,10 @@
 <?php
 namespace src\Validator;
 
+/* 
+validate options will validate command line arguments for action, floor and area and will raise
+apropriate exceptions.
+*/
 function validate_options(array $commandLineOptions)
 {
     if (!array_key_exists('action', $commandLineOptions)) {

@@ -1,6 +1,10 @@
 <?php
 namespace src\Battery;
 
+/* 
+Battery class provides machanism for charning robot with chargeBattery.
+Assuming 60 seconds required to get battery fully charged.
+*/
 class Battery
 {
     private $chargeLevel;

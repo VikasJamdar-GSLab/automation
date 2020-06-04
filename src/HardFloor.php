@@ -7,6 +7,9 @@ require_once('Apartment.php');
 use src\Floor\Floor;
 use src\Apartment\Apartment;
 
+/* 
+Hard floor require 1 seconds to clean unit area.
+*/
 final class HardFloor extends Floor implements Apartment
 {
     const TIME_TO_CLEAN_UNIT_AREA = 1;

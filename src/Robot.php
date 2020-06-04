@@ -11,6 +11,9 @@ use src\CarpetFloor\CarpetFloor;
 use src\Battery\Battery;
 use src\Validator as Validator;
 
+/* 
+Robot class will perform cleaning operation by using Floor and Battery class.
+*/
 class Robot
 {
     public function __construct(float $initialLevel)

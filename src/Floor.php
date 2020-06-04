@@ -1,6 +1,10 @@
 <?php
 namespace src\Floor;
 
+/* 
+Abstract Floor class used to share common properties among different types of floors
+like total area to be cleaned or cleaned area.
+*/
 abstract class Floor
 {
     private $totalArea;
