@@ -21,16 +21,16 @@ class Robot
 
     public function cleanFloor(Floor $floor)
     {
-        $timeRequiredToCleanUnitArea = $floor->getTimeRequiredToCleanUnitArea();
+        $timeRequiredToCleanUnitArea =get_class($floor)::TIME_TO_CLEAN_UNIT_AREA;
         // Formula to find charge consumed to clean 1 m**2 area
         $chargeConsumptionForOneUnit = (100*$timeRequiredToCleanUnitArea/Battery::TIME_TO_FULLCHARGE);
         echo "Initial State : chargingLevel : {$this->battery->chargeLevel}   Total Area:{$floor->totalArea} Area cleaned : {$floor->cleanedArea} m sq\n";
         while ($floor->cleanedArea<$floor->totalArea) {
             if ($this->battery->chargeLevel > 0 && ($this->battery->chargeLevel - $chargeConsumptionForOneUnit)>0) {
                 $this->battery->chargeLevel = $this->battery->chargeLevel - $chargeConsumptionForOneUnit;
-                $floor->cleanedArea = $floor->cleanedArea + 1;
+                $cleanedArea = $floor->cleanApartment();
                 $rounded_charge = round($this->battery->chargeLevel, 2);
-                echo "chargingLevel : {$rounded_charge}   Area cleaned : {$floor->cleanedArea} m sq\n";
+                echo "chargingLevel : {$rounded_charge}   Area cleaned : {$cleanedArea} m sq\n";
             } else {
                 echo "Robot need power. Switching to charging mode...\n";
                 $this->battery->chargeBattery();

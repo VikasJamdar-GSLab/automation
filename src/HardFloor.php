@@ -2,21 +2,22 @@
 namespace src\HardFloor;
 
 require_once('Floor.php');
+require_once('Apartment.php');
 
 use src\Floor\Floor;
+use src\Apartment\Apartment;
 
-class HardFloor extends Floor
+final class HardFloor extends Floor implements Apartment
 {
-    private $timeRequiredToCleanUnitArea;
+    const TIME_TO_CLEAN_UNIT_AREA = 1;
     public function __construct(int $totalArea)
     {
-        $this->timeRequiredToCleanUnitArea = 1;
         parent::__construct($totalArea);
     }
 
-    //Get the time required to clean 1 m**2 hard floor
-    public function getTimeRequiredToCleanUnitArea()
+    public function cleanApartment()
     {
-        return $this->timeRequiredToCleanUnitArea;
+        $this->cleanedArea = $this->cleanedArea + 1;
+        return $this->cleanedArea;
     }
 }
