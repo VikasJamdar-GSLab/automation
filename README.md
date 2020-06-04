@@ -22,7 +22,7 @@ Where Robot.php is the main module to be executed with following command line ar
 
 Sample Result:<br/>
 
-C:\xampp\htdocs\php_training\automation>php Main.php --action=clean --floor=carpet --area=40<br/>
+C:\xampp\htdocs\php_training\automation>php src/Main.php --action=clean --floor=carpet --area=40<br/>
 Initial State : chargingLevel : 100   Total Area:40 Area cleaned : 0 m sq<br/>
 chargingLevel : 96.67   Area cleaned : 1 m sq<br/>
 chargingLevel : 93.33   Area cleaned : 2 m sq<br/>
