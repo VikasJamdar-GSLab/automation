@@ -1,4 +1,5 @@
 <?php
+namespace src\Battery;
 
 class Battery
 {
@@ -40,5 +41,4 @@ class Battery
         echo "Resuming to cleaning...\n";
         return $this->chargeLevel;
     }
-
 }

@@ -1,13 +1,18 @@
 <?php
-require_once('AbstractFloor.php');
+namespace src\CarpetFloor;
 
-class HardFloor extends Floor
+require_once('Floor.php');
+
+use src\Floor\Floor as Floor;
+
+class CarpetFloor extends Floor
 {
     private $timeRequiredToCleanUnitArea;
+
     public function __construct(int $totalArea)
     {
-        $this->timeRequiredToCleanUnitArea = 1;
         parent::__construct($totalArea);
+        $this->timeRequiredToCleanUnitArea = 2;
     }
 
     //Get the time required to clean 1 m**2 hard floor

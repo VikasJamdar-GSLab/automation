@@ -1,10 +1,15 @@
 <?php
+namespace src\Robot;
 
 require_once('HardFloor.php');
 require_once('CarpetFloor.php');
-require_once('Validation.php');
+require_once('Validator.php');
 require_once('Battery.php');
-
+use src\Floor\Floor;
+use src\HardFloor\HardFloor;
+use src\CarpetFloor\CarpetFloor;
+use src\Battery\Battery;
+use src\Validator as Validator;
 
 class Robot
 {
@@ -35,10 +40,10 @@ class Robot
     }
 
 
-    public static function startRobot(array $options)
+    public function startRobot(array $options)
     {
         try {
-            validate_options($options);
+            Validator\validate_options($options);
             if ($options) {
                 $action = $options['action'];
                 $floor = $options['floor'];
@@ -53,7 +58,7 @@ class Robot
                 $robot = new Robot(100);
                 $robot->cleanFloor($floor_obj);
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return $e->getMessage();
         }
     }

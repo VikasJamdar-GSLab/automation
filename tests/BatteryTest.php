@@ -1,7 +1,8 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-require('Battery.php');
+require('src/Battery.php');
+use src\Battery\Battery;
 
 final class BatteryTest extends TestCase
 {

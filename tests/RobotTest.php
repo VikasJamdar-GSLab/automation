@@ -1,9 +1,13 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-require_once('CarpetFloor.php');
-require_once('HardFloor.php');
-require_once('Robot.php');
+require_once('src/CarpetFloor.php');
+require_once('src/HardFloor.php');
+require_once('src/Robot.php');
+
+use src\HardFloor\HardFloor;
+use src\CarpetFloor\CarpetFloor;
+use src\Robot\Robot;
 
 final class RobotTest extends TestCase
 {

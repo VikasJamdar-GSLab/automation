@@ -1,5 +1,7 @@
 <?php
 
+use src\Robot\Robot as Robot;
+
 require('Robot.php');
 
 $longopts  = array(

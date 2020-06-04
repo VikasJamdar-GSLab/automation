@@ -1,4 +1,5 @@
 <?php
+namespace src\Floor;
 
 abstract class Floor
 {
