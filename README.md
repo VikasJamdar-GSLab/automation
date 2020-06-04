@@ -12,7 +12,7 @@ Clone this automation git repository.<br/>
 Change directory to automation<br/>
 Run robot cleaning task for hard floor use following command:<br/>
 
-php Main.php --action=clean --floor=carpet --area=100<br/>
+php src/Main.php --action=clean --floor=carpet --area=100<br/>
 
 Where Robot.php is the main module to be executed with following command line arguments:<br/>
 1)action : This argument define what task robot has to do. Right now robot only can do cleaning job<br/>
